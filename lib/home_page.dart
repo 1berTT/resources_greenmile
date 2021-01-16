@@ -40,7 +40,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: <Widget>[
           Padding(
-            padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 0.0),
+            padding: EdgeInsets.fromLTRB(10.0, 15.0, 10.0, 10.0),
             child: TextField(
               controller: _controller,
               decoration: InputDecoration(
@@ -153,6 +153,7 @@ class _HomePageState extends State<HomePage> {
                       _controller.text = "";
                     });
                   },
+		  elevation: 5.0,
                 ),
               ],
             ),
@@ -208,7 +209,7 @@ class _HomePageState extends State<HomePage> {
         color: Colors.grey[300],
       ),
       padding: EdgeInsets.all(10.0),
-      margin: EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 5.0),
+      margin: index == 0 ? EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0) : EdgeInsets.fromLTRB(10.0, 10.0, 10.0, 5.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
